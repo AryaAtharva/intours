@@ -1,0 +1,11 @@
+extends base 
+include _reviewCardx
+
+block content
+    h1.heading-primary
+        span My Reviews
+    main.main
+        .card-container
+            each review in reviews
+                - if(review.tour)
+                    +reviewCard(review)
